@@ -1,0 +1,45 @@
+<div >
+    <h1>Add New Contact</h1>
+    <form >
+    
+        <div class="form-group">
+            <label for="tktId">Ticket Id</label>
+            <input type="text" class="form-control" id="tktId" name="tktId" [(ngModel)]="ticket.tktId">
+        </div>
+    
+        <div class="form-group">
+            <label for="createdDate">Created Date</label>
+            <input type="date" class="form-control" id="createdDate" name="createdDate" [(ngModel)]="ticket.createdDate">
+        </div>
+    
+        <div class="form-group">
+            <label for="raisedBy">Raised By</label>
+            <input type="text" class="form-control" id="raisedBy" name="raisedBy" [(ngModel)]="ticket.raisedBy">
+        </div>
+    
+        <div class="form-group">
+            <label for="assignedTo">Assigned To</label>
+            <input type="text" class="form-control" id="assignedTo" name="assignedTo" [(ngModel)]="ticket.assignedTo">
+        </div>
+    
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" [(ngModel)]="ticket.subject">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" [(ngModel)]="ticket.description">
+        </div>
+
+        
+        <div class="form-group">
+            <label for="cs">Current Status</label>
+            <input type="currentStatus" class="form-control" id="cs" name="cs" [(ngModel)]="ticket.cs">
+        </div>
+
+          <button type="button" class="btn btn-success" (click)="saveTicket()">Submit</button>
+      
+    </form>
+    
+  </div>

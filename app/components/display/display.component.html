@@ -1,0 +1,28 @@
+<div>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Created Date</td>
+    <td>Raised By</td>
+    <td>Assigned To</td>
+    <td>Subject</td>
+    <td>Description</td>
+    <td>Current Status</td>
+    <td>Action</td>
+  </tr>
+  <tr>
+    <td *ngFor="let tkt of allTickets">
+      <tr>{{tkt.tktId}}</tr>
+      <tr>{{tkt.createdDate}}</tr>
+      <tr>{{tkt.raisedBy}}</tr>
+      <tr>{{tkt.assignedTo}}</tr>
+      <tr>{{tkt.subject}}</tr>
+      <tr>{{tkt.description}}</tr>
+      <tr>{{tkt.cs}}</tr>
+      <tr><input type="button" value="Delete" (click)="deleteTicket(tkt.id)" /> |
+         <input type="button" value="Delete" (click)="updateTicket(tkt.id)" /></tr>
+    </td>
+  </tr>
+</table>  
+
+</div>
