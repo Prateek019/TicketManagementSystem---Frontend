@@ -73,8 +73,12 @@ searchTkt(id:number):Observable<Ticket>{
   .map(this.extractData);
 
 }
-updateTicket(id:number){
-  this.http.put(this.updateticketURL+"/"+id).map(this.extractData);
+updateTicket(ticket:Ticket):Promise<Ticket>{
+  let headers = new Headers({'content-Type' : 'application/json'});
+  let options = new RequestOptions({headers:headers});
+  return this.http.put(this.updateTicketUrl, ticket, options).toPromise()
+  .then(this.extractTicketData)
+  .catch(this.handleErrorPromise);
+  
 }
-
 }

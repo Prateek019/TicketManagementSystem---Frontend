@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { CreateticketComponent } from './components/createticket/createticket.component';
 import {FormsModule} from '@angular/forms';
 import { SearchbyidComponent } from './components/searchbyid/searchbyid.component';
+import { UpdateTicketComponent } from './components/update-ticket/update-ticket.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SearchbyidComponent } from './components/searchbyid/searchbyid.componen
     DisplayComponent,
     CreateticketComponent,
     SearchbyidComponent,
+    UpdateTicketComponent,
     
   ],
   imports: [

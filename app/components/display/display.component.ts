@@ -36,15 +36,15 @@ export class DisplayComponent implements OnInit {
    
    updateTicket(id:number){
     
-     this.router.navigate(['createticket/'+id])
-     this.tktServ.updateTicket(id).subscribe(
+     this.router.navigate(['update-ticket/'+id])
+     /*this.tktServ.updateTicket(id).subscribe(
        resp=>{
          if(resp.ok)
          {
           this.router.navigate(['display']);
          }
        }
-     )
+     )*/
    }
 
 

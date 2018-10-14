@@ -1,0 +1,46 @@
+<div >
+  <h1>Add New Contact</h1>
+  <form >
+  
+      <div class="form-group" >
+          <label for="id">Ticket Id</label>
+          <input type="number" class="form-control" id="id" name="id" [readonly]="true" [(ngModel)]="ticket.id">
+      </div>
+      
+  
+      <div class="form-group">
+          <label for="date">Created Date</label>
+          <input type="date" class="form-control" id="date" name="date" [readonly]="true" [(ngModel)]="ticket.date">
+      </div>
+  
+      <div class="form-group">
+          <label for="createdBy">Raised By</label>
+          <input type="text" class="form-control" id="createdBy" name="createdBy" [readonly]="true" [(ngModel)]="ticket.createdBy">
+      </div>
+  
+      <div class="form-group">
+          <label for="assigned">Assigned To</label>
+          <input type="text" class="form-control" id="assigned" name="assigned"  [readonly]="true" [(ngModel)]="ticket.assigned">
+      </div>
+  
+      <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" class="form-control" id="subject" name="subject" [readonly]="true" [(ngModel)]="ticket.subject">
+      </div>
+
+      <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" name="description" [(ngModel)]="ticket.description">
+      </div>
+
+      
+      <div class="form-group">
+          <label for="currStatus">Current Status</label>
+          <input type="currentStatus" class="form-control" id="currStatus" name="currStatus" [(ngModel)]="ticket.currStatus">
+      </div>
+
+        <button type="submit" class="btn btn-success" (click)="updateTicket()">Submit</button>
+    
+  </form>
+  
+</div>
